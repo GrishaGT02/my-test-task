@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: #eee;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+}
+.editor-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#insert-btn {
+  background: #cfc;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#editor {
+  border: 1px solid #ccc;
+  min-height: 500px;
+}
+.templates-panel {
+  flex: 1;
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}
+.templates-list-section {
+  margin-bottom: 20px;
+}
+.templates-title, .edit-template-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#templates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+}
+#templates-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.15s;
+}
+#templates-list li:last-child {
+  border-bottom: none;
+}
+#templates-list li.selected {
+  background-color: #333333;
+}
+#templates-list li:hover {
+  background-color: #444444;
+}
+.templates-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+button.danger {
+  background-color: #ff5252;
+  color: white;
+}
+button.success {
+  background-color: #4caf50;
+  color: white;
+}
+#edit-template-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.template-dropdown {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+.tox-edit-area iframe {
+  background: #fff;
+}
+
+/* Стили для выпадающих списков внутри редактора */
+.mce-content-body select[data-template-dropdown="true"] {
+  padding: 4px 12px;
+  border-radius: 5px;
+  border: 2px solid #5e5;
+  background: #222;
+  color: #fff;
+  font-size: 1em;
+  margin: 2px 4px;
+  outline: none;
+  transition: border 0.2s;
+}
+.mce-content-body select[data-template-dropdown="true"]:hover,
+.mce-content-body select[data-template-dropdown="true"]:focus {
+  border: 2px solid #8f8;
+  background: #333;
+}
+
+/* Стили для ERROR внутри редактора */
+.mce-content-body .error {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 5px;
+  background: #e55;
+  color: #fff;
+  font-weight: bold;
+  margin: 2px 4px;
+  font-size: 1em;
+  letter-spacing: 1px;
+} 
+
+/*# sourceMappingURL=styles.css.map*/
